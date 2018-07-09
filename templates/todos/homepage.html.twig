@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Todo form:</h1>
+    <form action="{{ path('add') }}" method="post">
+        <div class="form-group">
+            <label for="message">Todo input</label>
+            <input id="message" class="form-control" type="text" name="message" placeholder="Enter message">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <br>
+    <br>
+
+    <h1>Todo list:</h1>
+    <ul>
+        {% for todo in todos %}
+            <li>{{ todo.message }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
