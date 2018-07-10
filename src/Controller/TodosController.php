@@ -41,4 +41,16 @@ class TodosController extends AbstractController
 
         return $this->redirectToRoute('homepage');
     }
+
+    /**
+     * @Route("/todo/remove/{id}", name="remove")
+     */
+    public function removeTodo($id) {
+        $entityManager = $this->getDoctrine()->getManager();
+        $todo = $entityManager->getRepository(Todo::class)->find($id);
+        $entityManager->remove($todo);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('homepage');
+    }
 }

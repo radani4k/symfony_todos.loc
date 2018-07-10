@@ -16,7 +16,12 @@
     <h1>Todo list:</h1>
     <ul>
         {% for todo in todos %}
-            <li>{{ todo.message }}</li>
+            <li style="padding-bottom: 10px;">
+                {{ todo.id }} - {{ todo.message }}
+                <form action="{{ path('remove', {'id': todo.id}) }}" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}
