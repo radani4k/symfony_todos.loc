@@ -16,9 +16,13 @@
     <h1>Todo list:</h1>
     <ul>
         {% for todo in todos %}
-            <li style="padding-bottom: 10px;">
-                {{ todo.id }} - {{ todo.message }}
-                <form action="{{ path('remove', {'id': todo.id}) }}" method="post">
+            <li style="padding-bottom: 10px; list-style: none;">
+                <span class="{% if todo.status %}done{% endif %} ">{{ todo.id }} - {{ todo.message }}</span>
+                &nbsp;&nbsp;
+                <form action="{{ path('edit', {'id': todo.id}) }}" method="post" style="display: inline-block">
+                    <button type="submit">{%  if todo.status  %}Not{% endif %} Done</button>
+                </form>
+                <form action="{{ path('remove', {'id': todo.id}) }}" method="post" style="display: inline-block">
                     <button type="submit">Delete</button>
                 </form>
             </li>

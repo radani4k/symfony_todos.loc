@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cce5785d-7338-4534-bb92-501fa29b65d1" name="Default" comment="add delete doto">
+    <list default="true" id="cce5785d-7338-4534-bb92-501fa29b65d1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/TodosController.php" afterPath="$PROJECT_DIR$/src/Controller/TodosController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/todos/homepage.html.twig" afterPath="$PROJECT_DIR$/templates/todos/homepage.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,8 +55,8 @@
       <file leaf-file-name="TodosController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/TodosController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+            <state relative-caret-position="188">
+              <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
               <folding>
                 <element signature="e#34#54#0#PHP" expanded="true" />
               </folding>
@@ -66,8 +67,8 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+            <state relative-caret-position="135">
+              <caret line="9" column="49" lean-forward="false" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -96,10 +97,14 @@
       <file leaf-file-name="homepage.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/todos/homepage.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="155">
+              <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
               <folding>
-                <element signature="e#517#546#0#HTML" expanded="true" />
+                <element signature="e#517#564#0#HTML" expanded="true" />
+                <element signature="e#691#697#0#HTML" expanded="true" />
+                <element signature="e#697#703#0#HTML" expanded="true" />
+                <element signature="e#785#814#0#HTML" expanded="true" />
+                <element signature="e#1016#1045#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,9 +125,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/Controller/TodosController.php" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/templates/todos/homepage.html.twig" />
       </list>
     </option>
@@ -361,7 +366,7 @@
       <option name="presentableId" value="Default" />
       <updated>1531042424116</updated>
       <workItem from="1531042425618" duration="7111000" />
-      <workItem from="1531153153786" duration="6732000" />
+      <workItem from="1531153153786" duration="7927000" />
     </task>
     <task id="LOCAL-00001" summary="add and show dotos">
       <created>1531169465905</created>
@@ -370,11 +375,18 @@
       <option name="project" value="LOCAL" />
       <updated>1531169465905</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add delete todos">
+      <created>1531245115642</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1531245115642</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13843000" />
+    <option name="totallyTimeSpent" value="15038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="714" extended-state="6" />
@@ -408,7 +420,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add and show dotos" />
-    <option name="LAST_COMMIT_MESSAGE" value="add and show dotos" />
+    <MESSAGE value="add delete todos" />
+    <option name="LAST_COMMIT_MESSAGE" value="add delete todos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -523,30 +536,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/TodosController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        <state relative-caret-position="188">
+          <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
           <folding>
             <element signature="e#34#54#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="49" lean-forward="false" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/todos/homepage.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="155">
+          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
           <folding>
-            <element signature="e#517#546#0#HTML" expanded="true" />
+            <element signature="e#517#564#0#HTML" expanded="true" />
+            <element signature="e#691#697#0#HTML" expanded="true" />
+            <element signature="e#697#703#0#HTML" expanded="true" />
+            <element signature="e#785#814#0#HTML" expanded="true" />
+            <element signature="e#1016#1045#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

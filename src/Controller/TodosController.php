@@ -53,4 +53,25 @@ class TodosController extends AbstractController
 
         return $this->redirectToRoute('homepage');
     }
+
+    /**
+     * @Route("/todo/edit/{id}", name="edit")
+     */
+    public function update($id)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $todo = $entityManager->getRepository(Todo::class)->find($id);
+
+        if (!$todo) {
+            throw $this->createNotFoundException(
+                'No todo found for id '.$id
+            );
+        }
+
+        $todo->setStatus(!$todo->getStatus());
+        $entityManager->persist($todo);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('homepage');
+    }
 }
