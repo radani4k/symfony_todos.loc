@@ -6,6 +6,7 @@ use App\Entity\Todo;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 class TodosController extends AbstractController
 {
@@ -13,11 +14,11 @@ class TodosController extends AbstractController
     /**
      * @Route("/", name="homepage")
      */
-    public function homepage()
+    public function homepage(UserInterface $user)
     {
         $repository = $this->getDoctrine()->getRepository(Todo::class);
 
-        $todos = $repository->findAll();
+        $todos = $repository->findBy(['userId' => $user->getId()]);
 
         return $this->render('todos/homepage.html.twig', [
             'todos' => $todos
@@ -27,13 +28,14 @@ class TodosController extends AbstractController
     /**
      * @Route("/todo/add", name="add")
      */
-    public function addTodo() {
+    public function addTodo(UserInterface $user) {
         $entityManager = $this->getDoctrine()->getManager();
         $request = Request::createFromGlobals();
         $message = $request->get('message');
 
         $todo = new Todo();
         $todo->setMessage($message);
+        $todo->setUserId($user->getId());
         $todo->setStatus(0);
 
         $entityManager->persist($todo);

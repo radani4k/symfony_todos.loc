@@ -26,6 +26,11 @@ class Todo
      */
     private $status;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $userId;
+
     public function getId()
     {
         return $this->id;
@@ -51,6 +56,18 @@ class Todo
     public function setStatus(bool $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getUserId(): ?int
+    {
+        return $this->userId;
+    }
+
+    public function setUserId(int $userId): self
+    {
+        $this->userId = $userId;
 
         return $this;
     }
