@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <h1>Login form:</h1>
     {% if error %}
         <div style="color: #f00;">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
